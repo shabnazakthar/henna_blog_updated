@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #616161;
+      box-shadow: 0 0 10px rgba(78, 78, 78, 0.1);
+      border-radius: 20px ;
+      margin-bottom: 20px
+    }
+    
+    h1 {
+      text-align: center;
+      color: #0f0f0f;
+    }
+
+    
+    .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    
+    .feature-img {
+      flex: 1;
+      max-width: 100px;
+      transition: transform 0.3s ease;
+     
+    }
+    
+    /* .feature-img:hover {
+      transform: scale(1.1);
+
+    } */
+    
+    .feature-content {
+      flex: 1;
+      padding-left: 20px;
+    }
+    .feature-content h2{
+      font-family: 'Dancing Script',cursive;
+      font-size:30px;
+    }
+    .feature-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .feature-description {
+      font-size: 16px;
+      line-height: 1.5;
+      color: white;
+    }
+    
+    .slideshow {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .slideshow img {
+      display: none;
+      max-width: 100%;
+      height: auto;
+      width:225px;
+      height:225px;
+      border-radius:60%;
+      box-shadow: 5px 8px 10px #3b3d3c;
+    }
+    
+    .slideshow img.active {
+      display: block;
+    }
+    
+    .arrow-container {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .prev,
+    .next {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    /* CSS code */
+.arrow-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-container:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.arrow-container i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.mirror-image {
+      position: relative;
+      display: inline-block;
+      perspective: 1000px;
+    }
+
+    .mirror-image img {
+      transition: transform 0.3s;
+    }
+
+    .mirror-image:hover img {
+      transform: scale(1.1);
+    }
+
+    .mirror-image .mirror {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      overflow: hidden;
+      transform: rotateX(180deg);
+      transform-origin: center bottom;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .mirror-image:hover .mirror {
+      opacity: 1;
+    }
+
+    .mirror-image .mirror img {
+      transform: rotateX(180deg);
+      transform-origin: center bottom;
+    }
+  </style>
+  
+  <!-- Include Font Awesome library -->
+  <script src="https://kit.fontawesome.com/5bd111fff2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./blogwebsite.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caramel&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caramel&family=Dancing+Script&family=Roboto+Serif:opsz,wght@8..144,100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+<nav class="nav2">
+  <div class="menu">
+      <a href="../index.html"><i class="fa fa-home"></i>Home</a>
+      <a href="./features.html"><i class="fa fa-lock"></i>Features</a>
+       <!-- <a href="#"><i class="fa fa-check"></i>Lifestyle</a>
+      <a href="#"><i class="fa fa-bus"></i>Travel</a> -->
+      <a href="./booking.html"><i class="fa fa-book"></i>Booking</a>
+    
+
+      <a href="./contact.html"><i class="fa fa-phone"></i>Contact</a>
+      
+  </div>
+</nav>
+
+  
+  <div style="margin-top: 20px;" class="container">
+    <h1>FEATURES</h1>
+    
+    <div class="feature">
+      <div class="slideshow">
+        <div class="mirror-image">
+        <img src="hennapic1.jpeg" alt="Feature 1 Image 1" class="active">
+        <img src="img2.jpeg" alt="Feature 1 Image 2">
+        <img src="img3.jpeg" alt="Feature 1 Image 3">
+      </div>
+
+      <script>
+        var mirrorImages = document.querySelectorAll('.mirror-image');
+    
+        mirrorImages.forEach(function(mirrorImage) {
+          var mirror = mirrorImage.querySelector('.mirror');
+          var mirrorImg = mirrorImage.querySelector('.mirror img');
+    
+          mirrorImage.addEventListener('mousemove', function(event) {
+            var rect = mirrorImage.getBoundingClientRect();
+            var offsetX = event.clientX - rect.left;
+            var offsetY = event.clientY - rect.top;
+    
+            mirror.style.transformOrigin = offsetX + 'px ' + offsetY + 'px';
+    
+            var rotateX = -offsetY / rect.height * 180;
+            var rotateY = offsetX / rect.width * 180;
+    
+            mirror.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+            mirrorImg.style.transform = 'rotateX(' + (-rotateX) + 'deg) rotateY(' + (-rotateY) + 'deg)';
+          });
+        });
+      </script>
+        <div class="arrow-container prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="arrow-container next"><i class="fas fa-chevron-right"></i></div>
+      </div>
+      <div class="feature-content">
+        <h2 class="feature-title">Henna for Special Occasions</h2>
+        <p class="feature-description">Introducing our exquisite collection of henna designs tailored for special occasions. Whether you're preparing for a wedding, engagement, eid or any festival, or any other memorable event, our henna creations will add a touch of elegance and beauty to your celebration. </p>
+      </div>
+    </div>
+    
+    <div class="feature">
+      <div class="slideshow">
+        <div class="mirror-image">
+        <img src="tattoo1.jpeg" alt="Feature 2 Image 1" class="active">
+        <img src="tattoo2.jpeg" alt="Feature 2 Image 2">
+        <img src="tattoo3.jpg" alt="Feature 2 Image 3">
+      </div>
+
+      <script>
+        var mirrorImages = document.querySelectorAll('.mirror-image');
+    
+        mirrorImages.forEach(function(mirrorImage) {
+          var mirror = mirrorImage.querySelector('.mirror');
+          var mirrorImg = mirrorImage.querySelector('.mirror img');
+    
+          mirrorImage.addEventListener('mousemove', function(event) {
+            var rect = mirrorImage.getBoundingClientRect();
+            var offsetX = event.clientX - rect.left;
+            var offsetY = event.clientY - rect.top;
+    
+            mirror.style.transformOrigin = offsetX + 'px ' + offsetY + 'px';
+    
+            var rotateX = -offsetY / rect.height * 180;
+            var rotateY = offsetX / rect.width * 180;
+    
+            mirror.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+            mirrorImg.style.transform = 'rotateX(' + (-rotateX) + 'deg) rotateY(' + (-rotateY) + 'deg)';
+          });
+        });
+      </script>
+        <div class="arrow-container prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="arrow-container next"><i class="fas fa-chevron-right"></i></div>
+      </div>
+      <div class="feature-content">
+        <h2 class="feature-title">Henna Tattoo Art Gallery</h2>
+        <p class="feature-description">Here's where we celebrate the beauty and artistry of henna tattoos. Step into a world of mesmerizing designs, where butterflies, stars, leaves, and intricate patterns come to life on the canvas of the human body. </p>
+      </div>
+    </div>
+    
+    <div class="feature">
+      <div class="slideshow">
+        <div class="mirror-image">
+        <img src="henna1.jpeg" alt="Feature 3 Image 1" class="active">
+        <img src="henna2.jpeg" alt="Feature 3 Image 2">
+        <img src="henna3.jpeg" alt="Feature 3 Image 3">
+      </div>
+
+      <script>
+        var mirrorImages = document.querySelectorAll('.mirror-image');
+    
+        mirrorImages.forEach(function(mirrorImage) {
+          var mirror = mirrorImage.querySelector('.mirror');
+          var mirrorImg = mirrorImage.querySelector('.mirror img');
+    
+          mirrorImage.addEventListener('mousemove', function(event) {
+            var rect = mirrorImage.getBoundingClientRect();
+            var offsetX = event.clientX - rect.left;
+            var offsetY = event.clientY - rect.top;
+    
+            mirror.style.transformOrigin = offsetX + 'px ' + offsetY + 'px';
+    
+            var rotateX = -offsetY / rect.height * 180;
+            var rotateY = offsetX / rect.width * 180;
+    
+            mirror.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+            mirrorImg.style.transform = 'rotateX(' + (-rotateX) + 'deg) rotateY(' + (-rotateY) + 'deg)';
+          });
+        });
+      </script>
+        <div class="arrow-container prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="arrow-container next"><i class="fas fa-chevron-right"></i></div>
+      </div>
+      <div class="feature-content">
+        <h2 class="feature-title">Accessories & Organic Henna Products</h2>
+        <p class="feature-description">Enhance your henna artistry with our organic henna cones, versatile stencils, practical acrylic hands, and soothing aftercare balms. Elevate your henna designs and ensure long-lasting results.</p>
+      </div>
+    </div>
+    <div class="feature">
+        <div class="slideshow">
+          
+          <img src="shop1.jpeg" alt="Feature 4 Image 1" class="active">
+          <img src="shop3.jpg" alt="Feature 4 Image 2">
+          <img src="shop2.jpg" alt="Feature 4 Image 3">
+          <div class="arrow-container prev"><i class="fas fa-chevron-left"></i></div>
+          <div class="arrow-container next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="feature-content">
+          <h2 class="feature-title">Henna Workshops</h2>
+          <p class="feature-description">Our workshops cover a variety of topics, including basic henna application, advanced design techniques, and specialized bridal henna artistry. Discover the history, cultural significance, and techniques behind henna application, while honing your skills and unleashing your creativity.</p>
+        </div>
+      </div>
+    
+  
+    <div class="feature">
+      <div class="slideshow">
+        <div class="mirror-image">
+        <img src="offer2.jpeg" alt="Feature 5 Image 1" class="active">
+        <img src="offer1.jpeg" alt="Feature 5 Image 2">
+        <img src="offer3.jpeg" alt="Feature 5 Image 3">
+        </div>
+        <div class="arrow-container prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="arrow-container next"><i class="fas fa-chevron-right"></i></div>
+      </div>
+      <script>
+        var mirrorImages = document.querySelectorAll('.mirror-image');
+    
+        mirrorImages.forEach(function(mirrorImage) {
+          var mirror = mirrorImage.querySelector('.mirror');
+          var mirrorImg = mirrorImage.querySelector('.mirror img');
+    
+          mirrorImage.addEventListener('mousemove', function(event) {
+            var rect = mirrorImage.getBoundingClientRect();
+            var offsetX = event.clientX - rect.left;
+            var offsetY = event.clientY - rect.top;
+    
+            mirror.style.transformOrigin = offsetX + 'px ' + offsetY + 'px';
+    
+            var rotateX = -offsetY / rect.height * 180;
+            var rotateY = offsetX / rect.width * 180;
+    
+            mirror.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+            mirrorImg.style.transform = 'rotateX(' + (-rotateX) + 'deg) rotateY(' + (-rotateY) + 'deg)';
+          });
+        });
+      </script>
+      <div class="feature-content">
+        <h2 class="feature-title">Special Offers or Discounts</h2>
+        <p class="feature-description">We also provide Eid Special Discounts,Free Shipping on Accessories to enhance your henna experience without worrying about shipping costs,Workshop Discounts to learn where you can learn from us at a reduced rate. </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code
+    var slideshows = document.querySelectorAll('.slideshow');
+
+    slideshows.forEach(function(slideshow) {
+      var images = slideshow.querySelectorAll('img');
+      var prevArrow = slideshow.querySelector('.prev');
+      var nextArrow = slideshow.querySelector('.next');
+      var currentSlide = 0;
+
+      function resetSlides() {
+        images.forEach(function(image) {
+          image.classList.remove('active');
+        });
+      }
+
+      function showSlide() {
+        resetSlides();
+        images[currentSlide].classList.add('active');
+      }
+
+      prevArrow.addEventListener('click', function() {
+        currentSlide = (currentSlide - 1 + images.length) % images.length;
+        showSlide();
+      });
+
+      nextArrow.addEventListener('click', function() {
+        currentSlide = (currentSlide + 1) % images.length;
+        showSlide();
+      });
+    });
+  </script>
+  <footer>
+    <div class="container-1">
+    <p>All rights reserved &copy; 2023 by Shabnaz.</p>
+    </div>
+    </footer>
+    
+   
+    
+</body>
+</html>

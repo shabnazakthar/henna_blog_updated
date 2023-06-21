@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+
+
+
+
+
+<style>
+    body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (min-width: 767px) {
+form{
+    width: 60vw;
+}
+}
+</style>
+<link rel="stylesheet" type="text/css" href="./blogwebsite.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caramel&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caramel&family=Dancing+Script&family=Roboto+Serif:opsz,wght@8..144,100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav2">
+    <div class="menu">
+        <a href="../index.html"><i class="fa fa-home"></i>Home</a>
+        <a href="./features.html"><i class="fa fa-lock"></i>Features</a>
+         <!-- <a href="#"><i class="fa fa-check"></i>Lifestyle</a>
+        <a href="#"><i class="fa fa-bus"></i>Travel</a> -->
+        <a href="./booking.html"><i class="fa fa-book " ></i>Booking</a>
+      
+
+        <a href="./contact.html"><i class="fa fa-phone"></i>Contact</a>
+        
+    </div>
+</nav>
+    <h1 style="margin-top: 20px;">Booking Form</h1>
+    <div id="nothing"></div>
+    <form action="https://formspree.io/f/xpzevbyq" method="POST">
+      <label for="namee">Name:</label>
+      <input type="text" id="namee" name="name" required><br><br>
+  
+      <label for="contact">Contact No.:</label>
+      <input type="text" id="contact" name="contact" required><br><br>
+  
+      <label for="booking_date">Booking Date:</label>
+      <input type="date" id="booking-date" name="booking_date" required><br><br>
+  
+   
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea><br><br>
+  
+      <label for="location_map">Google Map link:</label>
+      <input type="text" id="location_map" name="location-map" required><br><br>
+  
+      <label for="design_type">Design Type:</label>
+      <input type="text" id="design_type" name="design-type" required><br><br>
+  
+      <label for="num_hands">No. of Hands:</label>
+      <input type="number" id="num_hands" name="num-hands" required><br><br>
+  
+      <input onclick="neww()" type="submit" value="Submit">
+    </form>
+</body>
+<script>
+  const namee = document.getElementById('namee');
+  const contact = document.getElementById('contact');
+  const booking_date = document.getElementById('booking-date');
+  const address = document.getElementById('address');
+  const location_map = document.getElementById('location_map');
+  const design_type = document.getElementById('design_type');
+  const num_hands = document.getElementById('num_hands');
+
+  // document.getElementById('nothing').innerHTML = contact.value;
+
+  console.log(namee.value);
+
+  // function neww() {
+  //   const url = `https://wa.me/+919061265269?text=name:${namee.value}%20|Contact:${contact.value}%20|B_Date:${booking_date.value}%20|Address:${address.value}%20|map:${location_map.value}%0D%0A|Design:${design_type.value}%20|NH:${num_hands.value}`;
+  //   window.location.href = url;
+  // }
+</script>
+<footer>
+  <div class="container-1">
+  <p>All rights reserved &copy; 2023 by Shabnaz.</p>
+  </div>
+  </footer>
+</html>

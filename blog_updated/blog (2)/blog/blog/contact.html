@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+   
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 5%;
+      background-color: rgb(36, 35, 35);
+      box-shadow: 0 0 10px rgba(78, 78, 78, 0.1);
+      border-radius: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically */
+      flex-wrap: wrap; /* Allow content to wrap within the container */
+    }
+    h1{
+        color: #2ecc71;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    label {
+      display: block;
+      font-size: 18px;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2ecc71;
+    }
+
+    .map {
+      height: 400px;
+      margin-top: 20px;
+      
+      margin-left: 12%;
+      flex-basis: 100%; /* Take full width */
+      border-radius: 10px;
+      margin-bottom: 70px;
+    }
+
+    /* Additional Styles */
+    .form-group {
+      margin-right: 30px;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="./blogwebsite.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caramel&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caramel&family=Dancing+Script&family=Roboto+Serif:opsz,wght@8..144,100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav2">
+        <div class="menu">
+            <a href="../index.html"><i class="fa fa-home"></i>Home</a>
+            <a href="./features.html"><i class="fa fa-lock"></i>Features</a>
+             <!-- <a href="#"><i class="fa fa-check"></i>Lifestyle</a>
+            <a href="#"><i class="fa fa-bus"></i>Travel</a> -->
+            <a href="./booking.html"><i class="fa fa-book"></i>Booking</a>
+          
+      
+            <a href="./contact.html"><i class="fa fa-phone"></i>Contact</a>
+            
+        </div>
+      </nav>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d7785.343874072602!2d74.91107223669803!3d12.669502250474906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d12.6730149!2d74.91501459999999!4m5!1s0x3ba361e842518393%3A0x6bea0ef2efffd00f!2sMW88%2BC99%20Firdouse%20nagar%2C%20Uppala%2C%20Kerala%20671322!3m2!1d12.665971299999999!2d74.9159895!5e0!3m2!1sen!2sin!4v1687271189348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <div class="form-group">
+      
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your email address">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="container-1">
+    <p>All rights reserved &copy; 2023 by Shabnaz.</p>
+    </div>
+    </footer>
+</body>
+</html>
